@@ -9,7 +9,7 @@ I have tried to use the [MacGregor product catalogue](https://www.macgregor.com/
 - "Twistlocks" are the above deck "Cones" or "Stackers".
 - "Midlocks" are "Bananas" or the cones between tight 20's on deck.
 - "Guts" is the lashing between 20's on deck.
-- "Lid Twistlocks" are "Deck Stackers" and are used to secure the containers to the lid.
+- "Decklocks" are "Deck Stackers" and are used to secure the containers to the lid.
 - "Lashing Bridges" are "Catwalks" or "Walkways".
 
 ## Linking
