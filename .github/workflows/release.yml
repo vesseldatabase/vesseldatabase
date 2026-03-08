@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: [actions/checkout@v4](https://github.com)
+        uses: actions/checkout@v4
 
       - name: Setup SQLite environment
         # Uses a Marketplace action to ensure sqlite3 is available
-        uses: [ccorsi/setup-sqlite@v1](https://github.com/marketplace/actions/setup-sqlite-environment)
+        uses: ccorsi/setup-sqlite@v1
         with:
           sqlite-version: '3.44.0' # Specify your desired version
           sqlite-year: '2023'
@@ -28,7 +28,7 @@ jobs:
       - name: Create GitHub Release
         id: create_release
         # This action creates the release itself
-        uses: [actions/create-release@v1](https://github.com)
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -40,7 +40,7 @@ jobs:
       - name: Upload Database Asset to Release
         id: upload-release-asset
         # This action uploads the generated file as a release asset
-        uses: [actions/upload-release-asset@v1](https://github.com)
+        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
