@@ -3,9 +3,10 @@ name: Build and Release SQLite DB
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
-  build-db:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -21,7 +22,7 @@ jobs:
       - name: Run SQL script to create DB
         run: |
           # The 'sqlite3' command is used to execute the .sql file
-          # and create the 'my_database.sqlite' file
+          # and create the 'vessels.db' file
           sqlite3 vessels.db < vessels.sql
 
       - name: Create GitHub Release
