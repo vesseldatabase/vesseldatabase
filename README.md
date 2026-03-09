@@ -33,4 +33,4 @@ You can automatically download the latest release by running:
 ```curl -LO https://github.com/vesseldatabase/vesseldatabase/releases/latest/download/vessels.db```
 
 ## License
-This database is [licensed by a Creative Commons BY-NC-SA license](https://raw.githubusercontent.com/vesseldatabase/vesseldatabase/refs/heads/main/LICENSE). Basically, you must link to either this repository or [https://ilwu.besz.ca/vessels](https://ilwu.besz.ca/vessels/) and you cannot use this database for commercial use. If you are running a paid website, this database must be part of a free portion of that site. Any derivative work must include this same license.
+This database is [licensed by a Creative Commons BY-NC-SA license](https://github.com/vesseldatabase/vesseldatabase?tab=License-1-ov-file). Basically, you must link to either this repository or [https://ilwu.besz.ca/vessels](https://ilwu.besz.ca/vessels/) and you cannot use this database for commercial use. If you are running a paid website, this database must be part of a free portion of that site. Any derivative work must include this same license.
