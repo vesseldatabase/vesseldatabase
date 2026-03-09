@@ -15,7 +15,9 @@ I have tried to use the [MacGregor product catalogue](https://www.macgregor.com/
 - "Lashing Bridges" are "Catwalks" or "Walkways".
 
 ## Linking
-If you already have an online despatch system, you can pass the vessel name like so: https://ilwu.besz.ca/vessels/?name=VESSEL+NAME -- just be sure to convert all spaces to plus '+' signs.
+If you already have an online despatch system, you can pass the vessel name like so:
+
+`https://ilwu.besz.ca/vessels/?name=VESSEL+NAME` -- just be sure to convert all spaces to plus '+' signs.
 
 ## Compiling
 To build the database, you can run the SQLite 3 command:
@@ -31,4 +33,4 @@ You can automatically download the latest release by running:
 ```curl -LO https://github.com/vesseldatabase/vesseldatabase/releases/latest/download/vessels.db```
 
 ## License
-This database is licensed by a Creative Commons BY-NC-SA license. Basically, you must link to either this repository or [https://ilwu.besz.ca/vessels](https://ilwu.besz.ca/vessels/) and you cannot use this database for commercial use. If you are running a paid website, this database must be part of a free portion of that site. Any derivative work must include this same license.
+This database is [licensed by a Creative Commons BY-NC-SA license](https://raw.githubusercontent.com/vesseldatabase/vesseldatabase/refs/heads/main/LICENSE). Basically, you must link to either this repository or [https://ilwu.besz.ca/vessels](https://ilwu.besz.ca/vessels/) and you cannot use this database for commercial use. If you are running a paid website, this database must be part of a free portion of that site. Any derivative work must include this same license.
