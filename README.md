@@ -22,7 +22,7 @@ If you already have an online despatch system, you can pass the vessel name like
 ## Compiling
 To build the database, you can run the SQLite 3 command:
 
-```sqlite3 vessels.db <vessels.sql```
+```sqlite3 vessels.db < vessels.sql```
 
 ## Release Schedule
 Aside from individual vessel updates, an automated task runs every Saturday morning (Pacific Time) to update all the vessel names based on their IMO. If you are using this database on your own website, downloading the latest release every Saturday night will ensure you have the latest data.
