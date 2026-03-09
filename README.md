@@ -1,7 +1,7 @@
 # The Vessel Database
-This is a SQLite3 database of container ships and their lashing gear. It is free to use and updated roughly weekly. I have a script that runs weekly to update the vessel name based on its IMO code. Most of this data started with Rey from ILWU Local 13 and is now maintained by [Blake](mailto:feedback@besz.ca) from ILWU Local 514.
+This is a SQLite3 database of container ships and their lashing gear. It is free to use and updated roughly weekly. Most of this data started with Rey from ILWU Local 13 and is now maintained by [Blake](mailto:feedback@besz.ca) from ILWU Local 514.
 
-You can access the database at [lashing.ca](https://lashing.ca/).
+You can access an searchable interface to the database at [lashing.ca](https://lashing.ca/).
 
 ## Terminology
 I have tried to use the [MacGregor product catalogue](https://www.macgregor.com/globalassets/picturepark/imported-assets/65120.pdf) terms or the terms the crew use for field names. Here is a quick reference:
@@ -16,6 +16,19 @@ I have tried to use the [MacGregor product catalogue](https://www.macgregor.com/
 
 ## Linking
 If you already have an online despatch system, you can pass the vessel name like so: https://ilwu.besz.ca/vessels/?name=VESSEL+NAME -- just be sure to convert all spaces to plus '+' signs.
+
+## Compiling
+To build the database, you can run the SQLite 3 command:
+
+```sqlite3 vessels.db <vessels.sql```
+
+## Release Schedule
+Aside from individual vessel updates, an automated task runs every Saturday morning (Pacific Time) to update all the vessel names based on their IMO. If you are using this database on your own website, downloading the latest release every Saturday night will ensure you have the latest data.
+
+## Downloading The Latest Release
+You can automatically download the latest release by running:
+
+```curl -LO https://github.com/vesseldatabase/vesseldatabase/releases/latest/download/vessels.db```
 
 ## License
 This database is licensed by a Creative Commons BY-NC-SA license. Basically, you must link to either this repository or [https://ilwu.besz.ca/vessels](https://ilwu.besz.ca/vessels/) and you cannot use this database for commercial use. If you are running a paid website, this database must be part of a free portion of that site. Any derivative work must include this same license.
