@@ -6,13 +6,13 @@ You can access an searchable interface to the database at [lashing.ca](https://l
 ## Terminology
 I have tried to use the [MacGregor product catalogue](https://www.macgregor.com/globalassets/picturepark/imported-assets/65120.pdf) terms or the terms the crew use for field names. Here is a quick reference:
 
-- "External" lashing is "Knuckle" or "Chinese".
-- "Horizontal" lashing is "Belly" or "Barrel" or "Torpedoes".
-- "Twistlocks" are the above deck "Cones" or "Stackers".
-- "Midlocks" are "Bananas" or the cones between tight 20's on deck.
-- "Guts" is the lashing between 20's on deck.
-- "Decklocks" are "Deck Stackers" and are used to secure the containers to the lid.
-- "Lashing Bridges" are "Catwalks" or "Walkways".
+- "External" lashing is "Knuckle" or "Chinese"
+- "Horizontal" lashing is "Belly" or "Barrel" or "Torpedoes"
+- "Twistlocks" are the above deck "Cones" or "Stackers"
+- "Midlocks" are "Bananas" or the cones between tight 20's on deck
+- "Guts" is the lashing between 20's on deck
+- "Decklocks" are "Deck Stackers" and are used to secure the containers to the lid
+- "Lashing Bridges" are "Catwalks" or "Walkways"
 
 ## Linking
 If you already have an online despatch system, you can pass the vessel name like so:
@@ -20,7 +20,7 @@ If you already have an online despatch system, you can pass the vessel name like
 `https://ilwu.besz.ca/vessels/?name=VESSEL+NAME` -- just be sure to convert all spaces to plus '+' signs.
 
 ## Compiling
-To build the database, you can run the SQLite 3 command:
+To build the database, you can run the SQLite3 command:
 
 ```sqlite3 vessels.db < vessels.sql```
 
