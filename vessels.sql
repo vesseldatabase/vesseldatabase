@@ -1491,6 +1491,9 @@ INSERT INTO vessels VALUES(1445,9278088,'YM WEALTH',2004,5500,15,16,NULL,NULL,5,
 INSERT INTO vessels VALUES(1446,9725160,'HYUNDAI PLUTO',2016,NULL,NULL,19,NULL,NULL,5,NULL,4,NULL,NULL,9,10,NULL,'20'' AB lashing off the deck and single lash above. C bars very high on 45'' bays.',NULL,NULL,5,NULL,NULL,1,NULL,NULL,5,NULL,3,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO vessels VALUES(1447,9964209,'MSC NAPOLI',2024,15576,22,20,NULL,NULL,1,NULL,5,NULL,NULL,9,12,NULL,'2-tier AB external (Knuckle/Chinese). B at 3rd tier, AB at 4th tier, AB on ends at 5th tier. No guts -- all midlocks.',1,NULL,NULL,5,3,1,NULL,NULL,5,NULL,2,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO vessels VALUES(1448,1013171,'MSC ELIANA',2025,NULL,NULL,18,NULL,NULL,1,NULL,5,NULL,NULL,9,12,NULL,'A on lower tier, AB on upper tier. End lashing is 3 cells AB.',NULL,NULL,NULL,1,3,NULL,'2 types of turnbuckles: A are light, B are heavy',NULL,9,NULL,2,NULL,NULL,1,NULL,NULL);
+INSERT INTO vessels VALUES(1449,9439747,'KOTA LUKIS',2010,4250,15,NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+PRAGMA writable_schema=ON;
+CREATE TABLE IF NOT EXISTS sqlite_sequence(name,seq);
 DELETE FROM sqlite_sequence;
 INSERT INTO sqlite_sequence VALUES('weights',3);
 INSERT INTO sqlite_sequence VALUES('twistlocks',7);
@@ -1502,6 +1505,7 @@ INSERT INTO sqlite_sequence VALUES('lashing_bridges',5);
 INSERT INTO sqlite_sequence VALUES('gear_qualities',6);
 INSERT INTO sqlite_sequence VALUES('extensions',6);
 INSERT INTO sqlite_sequence VALUES('bars',7);
-INSERT INTO sqlite_sequence VALUES('vessels',1448);
+INSERT INTO sqlite_sequence VALUES('vessels',1449);
 CREATE INDEX idx_name ON vessels (name);
+PRAGMA writable_schema=OFF;
 COMMIT;
