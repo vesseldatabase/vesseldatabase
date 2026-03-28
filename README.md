@@ -1,5 +1,5 @@
 # The Vessel Database
-This is a SQLite3 database of container ships and their lashing gear. It is free to use and updated roughly weekly. Most of this data started with Rey from ILWU Local 13 and is now maintained by [Blake](mailto:feedback@besz.ca) from ILWU Local 514.
+This is a [SQLite3](https://sqlite.org/) database of container ships and their lashing gear. It is free to use and updated roughly weekly. Most of this data started with Rey from ILWU Local 13 and is now maintained by [Blake](mailto:feedback@besz.ca) from ILWU Local 514.
 
 You can access an searchable interface to the database at [lashing.ca](https://lashing.ca/).
 
@@ -15,9 +15,15 @@ I have tried to use the [MacGregor product catalogue](https://www.macgregor.com/
 - "Lashing Bridges" are "Catwalks" or "Walkways"
 
 ## Linking
-If you already have an online despatch system, you can pass the vessel name like so:
+If you already have an online despatch system and just want to link to my website instead of hosting your own copy of the database, you can pass the vessel name like so:
 
 `https://ilwu.besz.ca/vessels/?name=VESSEL+NAME` -- just be sure to convert all spaces to plus '+' signs.
+
+If you want to get fancy and see if a vessel exists in the database before you create a link to it, you can query:
+
+`https://ilwu.besz.ca/vessels/get-json/exists/?name=VESSEL+NAME`
+
+This will return a JSON response with either `true` or `false`.
 
 ## Compiling
 To build the database, you can run the SQLite3 command:
