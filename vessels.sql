@@ -1493,6 +1493,8 @@ INSERT INTO vessels VALUES(1447,9964209,'MSC NAPOLI',2024,15576,22,20,NULL,NULL,
 INSERT INTO vessels VALUES(1448,1013171,'MSC ELIANA',2025,NULL,18,18,NULL,NULL,1,NULL,5,NULL,NULL,9,12,NULL,'A on lower tier, AB on upper tier. End lashing is 3 cells AB.',NULL,NULL,NULL,1,3,NULL,'2 types of turnbuckles: A are light, B are heavy',NULL,9,NULL,2,NULL,NULL,1,NULL,NULL);
 INSERT INTO vessels VALUES(1449,9439747,'KOTA LUKIS',2010,4250,15,NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO vessels VALUES(1450,9979010,'MSC BOSTON',2026,NULL,18,18,NULL,NULL,1,NULL,5,NULL,NULL,9,12,NULL,'A on lower tier, AB on upper tier. End lashing is 3 cells AB.',NULL,NULL,NULL,1,NULL,2,NULL,NULL,5,NULL,2,NULL,NULL,NULL,NULL,NULL);
+PRAGMA writable_schema=ON;
+CREATE TABLE IF NOT EXISTS sqlite_sequence(name,seq);
 DELETE FROM sqlite_sequence;
 INSERT INTO sqlite_sequence VALUES('weights',3);
 INSERT INTO sqlite_sequence VALUES('twistlocks',7);
@@ -1505,5 +1507,73 @@ INSERT INTO sqlite_sequence VALUES('gear_qualities',6);
 INSERT INTO sqlite_sequence VALUES('extensions',6);
 INSERT INTO sqlite_sequence VALUES('bars',7);
 INSERT INTO sqlite_sequence VALUES('vessels',1450);
+CREATE VIEW v_vessels AS SELECT
+    -- vessels table
+    vessels.imo AS imo,
+    vessels.name AS name,
+    vessels.built AS built,
+    vessels.teu AS teu,
+    vessels.bays AS bays,
+    vessels.width AS width,
+    vessels.former_names AS former_names,
+    vessels.deck_lashing_range AS deck_lashing_range,
+    vessels.obstructions AS obstructions,
+    vessels.lashing_bridge_range AS lashing_bridge_range,
+    vessels.stretch_bays AS stretch_bays,
+    vessels.horizontal_lashing AS horizontal_lashing,
+    vessels.lashing_notes AS lashing_notes,
+    vessels.turnbuckle_notes AS turnbuckle_notes,
+    vessels.swivel_nut AS swivel_nut,
+    vessels.wd40 AS wd40,
+    vessels.bad_twistlocks AS bad_twistlocks,
+    vessels.semi_automatic_lid_twistlocks AS semi_automatic_lid_twistlocks,
+    vessels.two_houses AS two_houses,
+    vessels.notes AS notes,
+
+    -- joined tables
+    deck_lashing_patterns.name AS deck_lashing_pattern,
+    lashing_bridges.name AS lashing_bridges,
+    lashing_patterns.name AS lashing_pattern,
+    end_lashing_patterns.name AS end_lashing_pattern,
+    bars.name AS bars,
+    bar_weights.name AS bar_weight,
+    extensions.name AS extensions,
+    turnbuckles.name AS turnbuckles,
+    gear_qualities.name AS turnbuckle_quality,
+    turnbuckle_weights.name AS turnbuckle_weight,
+    nuts.name AS nuts,
+    twistlocks.name AS twistlocks,
+    stackers.name AS stackers
+    
+FROM vessels
+
+LEFT JOIN lashing_patterns AS deck_lashing_patterns
+    ON vessels.deck_lashing_pattern_id = deck_lashing_patterns.id
+LEFT JOIN lashing_bridges
+    ON vessels.lashing_bridges_id = lashing_bridges.id
+LEFT JOIN lashing_patterns
+    ON vessels.lashing_pattern_id = lashing_patterns.id
+LEFT JOIN lashing_patterns AS end_lashing_patterns
+    ON vessels.end_lashing_pattern_id = end_lashing_patterns.id
+LEFT JOIN bars
+    ON vessels.bars_id = bars.id
+LEFT JOIN weights AS bar_weights
+    ON vessels.bar_weight_id = bar_weights.id
+LEFT JOIN extensions
+    ON vessels.extensions_id = extensions.id
+LEFT JOIN turnbuckles
+    ON vessels.turnbuckles_id = turnbuckles.id
+LEFT JOIN gear_qualities
+    ON vessels.turnbuckle_quality_id = gear_qualities.id
+LEFT JOIN weights AS turnbuckle_weights
+    ON vessels.turnbuckle_weight_id = turnbuckle_weights.id
+LEFT JOIN nuts
+    ON vessels.nuts_id = nuts.id
+LEFT JOIN twistlocks
+    ON vessels.twistlocks_id = twistlocks.id
+LEFT JOIN stackers
+    ON vessels.stackers_id = stackers.id
+;
 CREATE INDEX idx_name ON vessels (name);
+PRAGMA writable_schema=OFF;
 COMMIT;
