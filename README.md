@@ -21,7 +21,7 @@ If you already have an online despatch system and just want to link to my websit
 
 If you want to get fancy and see if a vessel exists in the database before you create a link to it, you can query:
 
-`https://ilwu.besz.ca/vessels/get-json/exists/?name=VESSEL+NAME`
+`https://ilwu.besz.ca/vessels/json/exists/?name=VESSEL+NAME`
 
 This will return a JSON response with either `true` or `false`.
 
