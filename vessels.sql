@@ -1574,6 +1574,8 @@ LEFT JOIN twistlocks
 LEFT JOIN stackers
     ON vessels.stackers_id = stackers.id
 ;
+CREATE VIEW v_exists AS SELECT id, name FROM vessels;
+CREATE VIEW v_search AS SELECT imo, name FROM vessels;
 CREATE INDEX idx_name ON vessels (name);
 PRAGMA writable_schema=OFF;
 COMMIT;
