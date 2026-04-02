@@ -1493,7 +1493,7 @@ INSERT INTO vessels VALUES(1447,9964209,'MSC NAPOLI',2024,15576,22,20,NULL,NULL,
 INSERT INTO vessels VALUES(1448,1013171,'MSC ELIANA',2025,NULL,18,18,NULL,NULL,1,NULL,5,NULL,NULL,9,12,NULL,'A on lower tier, AB on upper tier. End lashing is 3 cells AB.',NULL,NULL,NULL,1,3,NULL,'2 types of turnbuckles: A are light, B are heavy',NULL,9,NULL,2,NULL,NULL,1,NULL,NULL);
 INSERT INTO vessels VALUES(1449,9439747,'KOTA LUKIS',2010,4250,15,NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO vessels VALUES(1450,9979010,'MSC BOSTON',2026,NULL,18,18,NULL,NULL,1,NULL,5,NULL,NULL,9,12,NULL,'A on lower tier, AB on upper tier. End lashing is 3 cells AB.',NULL,NULL,NULL,1,NULL,2,NULL,NULL,5,NULL,2,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO vessels VALUES(1451,9461881,unistr('APL LE HAVRE'),2012,10070,21,18,NULL,'2 fwd to 14 fwd',5,NULL,3,'1-high 18 fwd to 26 fwd',NULL,5,1,NULL,unistr('Guts on some bays. Double lash inside and outside the guts. A bars obstruct B twistlocks so B level only discharge requires AB unlash.'),1,NULL,NULL,5,3,NULL,NULL,NULL,5,NULL,2,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO vessels VALUES(1451,9461881,'APL LE HAVRE',2012,10070,21,18,NULL,'2 fwd to 14 fwd',5,NULL,3,'1-high 18 fwd to 26 fwd',NULL,5,1,NULL,'Guts on some bays. Double lash inside and outside the guts. A bars obstruct B twistlocks so B level only discharge requires AB unlash.',1,NULL,NULL,5,3,NULL,NULL,NULL,5,NULL,2,NULL,NULL,NULL,NULL,NULL);
 PRAGMA writable_schema=ON;
 CREATE TABLE IF NOT EXISTS sqlite_sequence(name,seq);
 DELETE FROM sqlite_sequence;
