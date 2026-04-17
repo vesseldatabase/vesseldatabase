@@ -1500,6 +1500,7 @@ INSERT INTO vessels VALUES(1454,9792709,'YM TRILLION',2022,11714,NULL,NULL,NULL,
 INSERT INTO vessels VALUES(1455,9409209,'CMA CGM MAUPASSANT',2010,6477,18,16,NULL,'2 fwd to 10 fwd',8,NULL,2,NULL,NULL,5,14,NULL,'Guts between 20s',NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,5,NULL,2,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO vessels VALUES(1456,9323039,'CMA CGM ALIAGA',2008,3586,15,13,NULL,NULL,5,NULL,1,NULL,NULL,NULL,13,NULL,NULL,NULL,NULL,NULL,1,3,NULL,NULL,NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO vessels VALUES(1457,9806081,'ONE CYGNUS',2019,14052,22,20,NULL,'1 fwd only',3,NULL,4,NULL,NULL,3,12,NULL,'Additional tier is B External (Knuckle/Chinese) and single diagonal C bar',1,NULL,NULL,1,3,NULL,NULL,NULL,NULL,NULL,3,NULL,NULL,4,NULL,NULL);
+INSERT INTO vessels VALUES(1458,9409041,'MSC WEST V',2009,4228,16,13,NULL,NULL,5,NULL,1,NULL,NULL,NULL,NULL,1,'Guts in all bays with B lashing. Raised covers in all bays, an extension required for every bar if high cube.',3,NULL,1,9,NULL,NULL,'Pull pins on deck turnbuckles to save time.',NULL,NULL,NULL,2,NULL,NULL,NULL,NULL,NULL);
 DELETE FROM sqlite_sequence;
 INSERT INTO sqlite_sequence VALUES('weights',3);
 INSERT INTO sqlite_sequence VALUES('twistlocks',7);
@@ -1511,7 +1512,7 @@ INSERT INTO sqlite_sequence VALUES('lashing_bridges',5);
 INSERT INTO sqlite_sequence VALUES('gear_qualities',6);
 INSERT INTO sqlite_sequence VALUES('extensions',6);
 INSERT INTO sqlite_sequence VALUES('bars',7);
-INSERT INTO sqlite_sequence VALUES('vessels',1457);
+INSERT INTO sqlite_sequence VALUES('vessels',1458);
 CREATE VIEW v_vessels AS SELECT
     -- vessels table
     vessels.imo AS imo,
