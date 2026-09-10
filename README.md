@@ -1,7 +1,7 @@
 # The Vessel Database
 This is a [SQLite3](https://sqlite.org/) database of container ships and their lashing gear. It is free to use and updated roughly weekly. Most of this data started with Rey from ILWU Local 13 and is now maintained by [Blake](mailto:feedback@besz.ca) from ILWU Local 514.
 
-You can access an searchable interface to the database at [lashing.ca](https://lashing.ca/).
+You can access a searchable interface to the database at [lashing.ca](https://lashing.ca/).
 
 ## Terminology
 I have tried to use the [MacGregor product catalogue](https://www.macgregor.com/globalassets/picturepark/imported-assets/65120.pdf) terms or the terms the crew use for field names. Here is a quick reference:
@@ -31,7 +31,7 @@ To build the database, you can run the SQLite3 command:
 ```sqlite3 vessels.db < vessels.sql```
 
 ## Release Schedule
-Aside from individual vessel updates, an automated task runs every Saturday morning (Pacific Time) to update all the vessel names based on their IMO. If you are using this database on your own website, downloading the latest release every Saturday night will ensure you have the latest data.
+Aside from frequent individual vessel updates, an automated task runs on the 1st and 15th of every month at 1:00AM (Pacific Time) to update all the vessel names based on their IMO. If you are using this database on your own website, downloading the latest release every night on the 1st and 15th will ensure you have the latest data.
 
 ## Downloading The Latest Release
 You can automatically download the latest release by running:
