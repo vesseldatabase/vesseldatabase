@@ -31,7 +31,7 @@ To build the database, you can run the SQLite3 command:
 ```sqlite3 vessels.db < vessels.sql```
 
 ## Release Schedule
-Aside from frequent individual vessel updates, an automated task runs on the 1st and 15th of every month at 1:00AM (Pacific Time) to update all the vessel names based on their IMO. If you are using this database on your own website, downloading the latest release every night on the 1st and 15th will ensure you have the latest data.
+Aside from frequent individual vessel updates, an automated task runs on the 1st and 15th of every month at 1:00AM (Pacific Time) to update all the vessel names based on their IMO. If you are using this database on your own website, downloading the latest release on the night of the 1st and 15th will ensure you have the latest data.
 
 ## Downloading The Latest Release
 You can automatically download the latest release by running:
